@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitTrack — Portfolio Version</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="logo">💪 FitTrack</div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#pricing">Pricing</a>
+        <button id="open-auth" class="btn nav-btn">Sign Up / Login</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero section" id="hero">
+        <div class="hero-content">
+          <h1>Smash Your Fitness Goals</h1>
+          <p>
+            Your personal fitness companion to track, plan and grow stronger
+            every day.
+          </p>
+          <button class="btn" id="get-started">Get Started</button>
+        </div>
+      </section>
+
+      <section class="features section" id="features">
+        <h2 class="section-title">App Features</h2>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="1">Tracking</button>
+          <button class="tab-btn" data-tab="2">Analytics</button>
+          <button class="tab-btn" data-tab="3">Goals</button>
+        </div>
+        <div class="tab-content active" data-content="1">
+          <div class="feature-card">
+            <h3>Track Workouts</h3>
+            <p>Log your daily workouts with ease and precision.</p>
+          </div>
+        </div>
+        <div class="tab-content" data-content="2">
+          <div class="feature-card">
+            <h3>Visual Analytics</h3>
+            <p>See your progress through interactive graphs and stats.</p>
+          </div>
+        </div>
+        <div class="tab-content" data-content="3">
+          <div class="feature-card">
+            <h3>Smart Goal Setting</h3>
+            <p>Create and manage fitness goals tailored to you.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="section-title">About FitTrack</h2>
+            <p>
+              FitTrack is a lightweight, modern fitness companion designed to
+              help you build better habits, stay motivated, and track your
+              transformation — all in one place.
+            </p>
+          </div>
+          <div class="about-img">
+            <img
+              class="lazy-img"
+              src="https://via.placeholder.com/10x10/1a1a1a/00ff99?text=."
+              data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?fit=crop&w=800&q=80"
+              alt="Athlete working out"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section" id="testimonials">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="slider-container testimonial-slider">
+          <div class="slide">
+            <div class="testimonial-card">
+              <p>
+                "This app keeps me consistent! I’ve finally stuck to my routine
+                for 3 months straight."
+              </p>
+              <h4>- James O.</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="testimonial-card">
+              <p>
+                "I love the visual stats and the reminders to hit my goals. It’s
+                been a game-changer."
+              </p>
+              <h4>- Maria L.</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="testimonial-card">
+              <p>
+                "Simple, effective, and stylish. FitTrack just works for me."
+              </p>
+              <h4>- Kay S.</h4>
+            </div>
+          </div>
+          <button class="slider__btn slider__btn--left">&#10094;</button>
+          <button class="slider__btn slider__btn--right">&#10095;</button>
+          <div class="dots"></div>
+        </div>
+      </section>
+
+      <section class="pricing section" id="pricing">
+        <h2 class="section-title">Plans & Pricing</h2>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Free</h3>
+            <p class="price">$0</p>
+            <ul>
+              <li>Basic workout logs</li>
+              <li>Access to community</li>
+            </ul>
+          </div>
+          <div class="price-card highlight">
+            <h3>Pro</h3>
+            <p class="price">$5/mo</p>
+            <ul>
+              <li>Advanced analytics</li>
+              <li>Progress tracking</li>
+              <li>Goal reminders</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <h3>Elite</h3>
+            <p class="price">$12/mo</p>
+            <ul>
+              <li>Everything in Pro</li>
+              <li>Personalized coaching</li>
+              <li>1-on-1 support</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Auth Modal -->
+    <div class="modal hidden" id="auth-modal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="auth-grid">
+          <div class="auth-card">
+            <h3>Create Account</h3>
+            <form id="signup-form">
+              <input type="text" id="signup-name" placeholder="Name" required />
+              <input
+                type="email"
+                id="signup-email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="password"
+                id="signup-password"
+                placeholder="Password"
+                required
+              />
+              <button class="btn" type="submit">Sign Up</button>
+            </form>
+          </div>
+          <div class="auth-card">
+            <h3>Log In</h3>
+            <form id="login-form">
+              <input
+                type="email"
+                id="login-email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="password"
+                id="login-password"
+                placeholder="Password"
+                required
+              />
+              <button class="btn" type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 FitTrack. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#about">About</a>
+          <a href="#" id="footer-auth">Account</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
