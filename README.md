@@ -24,7 +24,7 @@ FitTrack is a clean, modern fitness and wellness landing page built entirely wit
 ## 🚀 Getting Started
 
 👉 **Live Demo:**  
-[Click here to view the app on GitHub Pages](https://your-name.github.io/fittrack/)
+[Click here to view the app on GitHub Pages](https://amitytobi.github.io/fittrack/)
 
 ---
 
