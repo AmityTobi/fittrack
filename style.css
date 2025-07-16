@@ -24,6 +24,15 @@ section {
   padding: 8rem 2rem;
   scroll-margin-top: 5rem;
 }
+a,
+button {
+  transition: all 0.3s ease;
+}
+a:hover,
+button:hover {
+  transform: scale(1.03);
+}
+
 /* Section scroll reveal */
 .section--hidden {
   opacity: 0;

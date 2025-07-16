@@ -28,8 +28,6 @@ const handleHover = function (e) {
     siblings.forEach(el => {
       if (el !== link) el.style.opacity = this; // 'this' is 0.5 or 1 from bind
     });
-    //  if SignIn is not part of siblings (e.g., it's a <button>), still fade it
-    if (SignIn !== link) SignIn.style.opacity = this;
   }
 };
 
